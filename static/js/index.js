@@ -11,7 +11,7 @@
 	//alert("led off");
 	console.log("Led encendido");
 	message = new Paho.MQTT.Message("ENCENDER");
-    	message.destinationName = "hfcasanova.fie@unach.edu.ec/claseprueba";
+    	message.destinationName = "israel.freire@espoch.edu.ec/iothc";
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
 }
@@ -19,7 +19,7 @@
 	//alert("led off");
 	console.log("Led apagado");
 	message = new Paho.MQTT.Message("APAGAR");
-    	message.destinationName = "hfcasanova.fie@unach.edu.ec/claseprueba";
+    	message.destinationName = "israel.freire@espoch.edu.ec/iothc";
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
 }
@@ -40,8 +40,8 @@
   client.onMessageArrived = onMessageArrived;
   var options = {
    useSSL: false,
-    userName: "hfcasanova.fie@unach.edu.ec",
-    password: "1930locohUgo1996",
+    userName: "israel.freire@espoch.edu.ec",
+    password: "KIfl19.,",
     onSuccess:onConnect,
     onFailure:doFail
   }
@@ -54,9 +54,9 @@
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("hfcasanova.fie@unach.edu.ec/claseprueba");
+    client.subscribe("israel.freire@espoch.edu.ec/iothc");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "hfcasanova.fie@unach.edu.ec/claseprueba";
+    message.destinationName = "israel.freire@espoch.edu.ec/iothc";
     client.send(message);
 	
   }
